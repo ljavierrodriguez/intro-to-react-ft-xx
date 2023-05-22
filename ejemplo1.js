@@ -139,3 +139,21 @@ function Heading() {
     <Heading /> {/* <h1>Luis</h1> */}
     <Heading /> {/* <h1>Luis</h1> */}
 </>
+
+
+function List() {
+    const [names, setNames] = useState(["Hugo", "Paco", "Luis", "Donald"]);
+    return (
+        <>
+            <ul>
+                {
+                    names.map((name, index) => {
+                        return (
+                            <li key={index}>{name}</li>
+                        )
+                    })
+                }
+            </ul>
+        </>
+    )
+}
